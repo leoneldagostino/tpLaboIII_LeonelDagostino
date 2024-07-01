@@ -4,97 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link href="./output.css" rel="stylesheet">
+
     <title>Inmobiliaria</title>
 </head>
 <body>
-    <Header >
-        
-        <!-- <img src="images/header.jpg" alt=""> -->
-        <nav class="navbar">
-            <img class="logo" src="images/logo.svg" alt="logo">
-            <ul >
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Anuncios</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <h1>Venta de casas y departamentos exclusivos de lujo</h1>
-    </Header>
-    
-    <main>
-        <section>
-            <h3 class="mas">Mas sobre nosotros</h3>
+
+    <div w3-include-html ="templates/header.html"></div>
+
+    <main class="p-4 md:p-8 lg:p-12">
+        <section >
+            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Más sobre nosotros</h3>
             
-            <div class="cards">
-                <div class="card">
-                    <img src="images/icono1.svg" alt="">
-                    <h2 class="card-titulo">Seguridad</h2>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur officiis est id quod dolores recusandae excepturi eius laboriosam! Eaque dolores corrupti rerum nihil aspernatur iure, dolore ab non temporibus iusto!</p>
-                    
-                </div>
-                <div class="card">
-                    <img src="images/icono2.svg" alt="">
-                    <h2 class="card-titulo">El mejor precio</h2>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur officiis est id quod dolores recusandae excepturi eius laboriosam! Eaque dolores corrupti rerum nihil aspernatur iure, dolore ab non temporibus iusto!</p>
-                </div>
-                <div class="card">
-                    <img src="images/icono3.svg" alt="">
-                    <h2 class="card-titulo">A tiempo</h2>
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur officiis est id quod dolores recusandae excepturi eius laboriosam! Eaque dolores corrupti rerum nihil aspernatur iure, dolore ab non temporibus iusto!</p>
-                </div>
-            </div>
+            
+            <div w3-include-html="templates/card.html"></div>
+            
+
+        </section>
                 
 
             
 
-        </section>
-
-        <section class="cards-casas">
-            <h2 class="cards-casas-titulo">Casas Y Departamentos en Venta</h2>
-            <div class="cards">
-                <div class="card-casa">
-    
-                    <img class="imagen-casa" src="images/anuncio1.jpg" alt="">
-                    <h3 class="card-titulo">Casa de lujo en el lago</h3>
-                    <p class="card-text">Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
-                    <h6 class="precio-casa">U$S 350.000</h4>
-                    <div class="iconos">
-                        <img src="images/icono_dormitorio.svg" alt=""><span> 3 </span>
-                        <img src="images/icono_wc.svg" alt=""><span> 3 </span>
-                        <img src="images/icono_estacionamiento.svg" alt=""><span> 3 </span>
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Casas y Departamentos en Venta</h2>
+            <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="flex flex-col bg-white p-6 shadow-md rounded-lg animacion">
+                    <img class="h-48 w-full object-cover mb-4" src="images/anuncio1.jpg" alt="Casa de lujo en el lago">
+                    <h3 class="text-xl font-bold mb-2">Casa de lujo en el lago</h3>
+                    <p class="mb-4">Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
+                    <h6 class="text-lg font-semibold mb-4">U$S 350.000</h6>
+                    <div class="flex justify-between mb-4">
+                        <span class="flex items-center"><img src="images/icono_dormitorio.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_wc.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_estacionamiento.svg" alt="" class="mr-2">3</span>
                     </div>
-                    
-                    <button class="btn-propiedad">Ver Propiedad</button>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Ver Propiedad</button>
                 </div>
-                <div class="card-casa">
-                    <img class="imagen-casa" src="images/anuncio2.jpg" alt="">
-                    <h3 class="card-titulo">Casa terminados de lujo</h3>
-                    <p class="card-text">Casa con diseño moderno, asi como tecnlogia inteligente y amueblada</p>
-                    <h6 class="precio-casa">U$S 275.000</h4>
-                        <div class="iconos">
-                            <img src="images/icono_dormitorio.svg"  alt=""><span> 3 </span>
-                            <img src="images/icono_wc.svg" alt=""> <span> 3 </span>
-                            <img src="images/icono_estacionamiento.svg" alt=""><span> 3 </span>
-                        </div>
-                        
-                        <Button class="btn-propiedad">Ver Propiedad</Button>
+                <div class="flex flex-col bg-white p-6 shadow-md rounded-lg transition-transform animacion">
+                    <img class="h-48 w-full object-cover mb-4" src="images/anuncio2.jpg" alt="Casa terminados de lujo">
+                    <h3 class="text-xl font-bold mb-2">Casa terminados de lujo</h3>
+                    <p class="mb-4">Casa con diseño moderno, así como tecnología inteligente y amueblada</p>
+                    <h6 class="text-lg font-semibold mb-4">U$S 275.000</h6>
+                    <div class="flex justify-between mb-4">
+                        <span class="flex items-center"><img src="images/icono_dormitorio.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_wc.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_estacionamiento.svg" alt="" class="mr-2">3</span>
                     </div>
-                    <div class="card-casa">
-                        <img class="imagen-casa" src="images/anuncio3.jpg" alt="">
-                        
-                        <h3 class="card-titulo">Casa con pileta</h3>
-                        <p class="card-text">Casa con pileta y acabados de lujo en al ciudad excelente oportunidad</p>
-                        <h6 class="precio-casa">U$S 250.000</h4>
-                            <div class="iconos">
-                                <img src="images/icono_dormitorio.svg" alt=""><span> 3 </span>
-                                <img src="images/icono_wc.svg" alt=""><span> 3 </span>
-                                <img src="images/icono_estacionamiento.svg" alt=""><span> 3 </span>
-                            </div>
-        
-                    <Button class="btn-propiedad">Ver Propiedad</Button>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Ver Propiedad</button>
                 </div>
-
+                <div class="flex flex-col bg-white p-6 shadow-md rounded-lg animacion">
+                    <img class="h-48 w-full object-cover mb-4" src="images/anuncio3.jpg" alt="Casa con pileta">
+                    <h3 class="text-xl font-bold mb-2">Casa con pileta</h3>
+                    <p class="mb-4">Casa con pileta y acabados de lujo en la ciudad, excelente oportunidad</p>
+                    <h6 class="text-lg font-semibold mb-4">U$S 250.000</h6>
+                    <div class="flex justify-between mb-4">
+                        <span class="flex items-center"><img src="images/icono_dormitorio.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_wc.svg" alt="" class="mr-2">3</span>
+                        <span class="flex items-center"><img src="images/icono_estacionamiento.svg" alt="" class="mr-2">3</span>
+                    </div>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Ver Propiedad</button>
+                </div>
             </div>
         </section>
 
@@ -143,22 +114,18 @@
         </div>
     </main>
                 
-    <footer>
-
-        <nav class="navbar">
-            <ul>
-                <a href="#">Nosotros</a>
-                <a href="#">Anuncios</a>
-                <a href="#">Blog</a>
-                <a href="#">Contacto</a>
-            </ul>
-        </nav>
 
 
-        <p>&copy; Todos los derechos reservados</p>
-            
-    </footer>
+    <div w3-include-html="templates/footer.html"></div>
 
+    <a href="https://wa.me/tunumerodetelefono" class="whatsapp" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/svgs/brands/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 
 </body>
 </html>

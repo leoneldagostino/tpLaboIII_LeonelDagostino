@@ -452,3 +452,22 @@
     height: 40px;
     margin-top: 25px;
   }
+
+  .animacion:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+  }
+
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #71b100;
+    border-radius: 50% 50% 50% 10%
+
+}
+
+.whatsapp-icon {
+    width: 60px; 
+}
